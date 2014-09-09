@@ -23,7 +23,7 @@ p {
 
 .body {
   background: url(../img/ui/fundo.jpg) no-repeat center top;
-  background-size: cover; 
+  background-size: cover;
   color: #fff;
   font-family: helvetica;
 }
@@ -94,4 +94,26 @@ p {
 
 .hidden {
   display: none;
+}
+
+@-moz-keyframes open-search {
+	from { height: 0; }
+	to { height: 100% }
+}
+
+#search-contact[data-open=true] {
+	animation: open-search .75s;
+}
+
+#search-contact[data-open=false] {
+	display: none;
+}
+
+#search-contact {
+	height: 100%;
+	background-color: red;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
 }
